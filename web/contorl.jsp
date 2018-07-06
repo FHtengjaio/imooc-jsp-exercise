@@ -12,6 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="select.js"></script>
     <title>XX学校信息发布平台</title>
 </head>
 <body>
@@ -32,13 +33,13 @@
     <table align="center" border="1px">
         <tr>
             <td>公告编号</td>
-            <td><input type="text" name="selectNumber"/></td>
-            <td><input type="button" name="selectbtn" value="select"></td>
+            <td><input id="selectNumber" type="text" name="selectNumber"/></td>
+            <td><input type="button" name="selectbtn" value="select" onclick="selectMessage()"></td>
         </tr>
     </table>
     <br>
     <br>
-    <table align="center" border="1px">
+    <table id="messageList" align="center" border="1px">
         <tr>
             <td>编号</td>
             <td>标题</td>
@@ -50,7 +51,7 @@
             for(String key: messageMap.keySet()){
                 Message m = messageMap.get(key);
         %>
-                <tr>
+                <tr id="<%=m.getNumber()%>">
                     <td><%=m.getNumber()%></td>
                     <td><%=m.getName()%></td>
                     <td><%=m.getContent()%></td>
