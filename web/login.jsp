@@ -11,7 +11,7 @@
     <title>XX学校信息发布平台</title>
 </head>
 <body>
-<h2 align="center">XX学校信息发布平台</h2>
+<h2 align="center">XX学校信息发布平台登入页面</h2>
 <hr />
 <form action="contorl.jsp">
     <table align="center" border="1px">
